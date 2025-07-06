@@ -133,7 +133,6 @@ enum {
 
 // Tap Dance definitions
 tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Escape, twice for Caps Lock
     [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, MOD_LALT),
 };
 
