@@ -138,7 +138,7 @@ tap_dance_action_t tap_dance_actions[] = {
 // Add tap dance item to your keymap in place of a keycode
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ...
-    TD(TD_RALT)
+    TD(TD_LALT)
     // ...
 };
 
