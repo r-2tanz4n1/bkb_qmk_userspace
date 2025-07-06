@@ -129,37 +129,13 @@ enum {
     TD_ALT,
 };
 
-/*
+
+
 // Tap Dance definitions
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
-    [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_LALT),
+    [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, MOD_LALT),
 };
-*/
-
-void alt_finished(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-        register_code(KC_SCLN);
-    } else {
-        register_code(KC_LALT);
-    }
-}
-
-void alt_reset(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-        unregister_code(KC_SCLN);
-    } else {
-        unregister_code(KC_LALT);
-    }
-}
-
-// Tap dance definitions
-tap_dance_action_t tap_dance_actions[] = {
-    [TD_ALT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_finished, alt_reset),
-};
-
-
-
 
 
 // clang-format off
@@ -205,7 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), LGUI(KC_B), RGUI(KC_W), KC_SPC, RGUI(KC_C), RGUI(KC_V), RGUI(KC_Z), KC_RSFT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                              HYPR_T(KC_NO), KC_LGUI, KC_ENT,    KC_BSPC, RGUI(KC_SPC),
-                                         KC_LALT, RCS(KC_Q),    KC_TAB
+                                         KC_LALT, LCS(KC_Q),    KC_TAB
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
