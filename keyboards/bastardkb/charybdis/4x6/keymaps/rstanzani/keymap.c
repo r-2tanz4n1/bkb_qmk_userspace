@@ -96,12 +96,12 @@ const uint16_t PROGMEM combo_layer3[] = {RGUI_T(KC_BSPC), HYPR_T(KC_DEL), COMBO_
 const uint16_t PROGMEM combo_hyper_space[] = {KC_J, KC_K, COMBO_END};
 
 // Map combos to their key sequences and result keys
-combo_t key_combos[COMBO_COUNT] = {
+combo_t key_combos[] = {
     [COMBO_F2] = COMBO(combo_f2, KC_F2),
     [COMBO_F3] = COMBO(combo_f3, KC_F3),
     [COMBO_F4] = COMBO(combo_f4, KC_F4),
     [COMBO_CAPS] = COMBO(combo_caps, KC_CAPS),
-    [COMBO_CAPS_WORD] = COMBO(combo_caps_word, 0x7c73),
+    [COMBO_CAPS_WORD] = COMBO(combo_caps_word, CW_TOGG),
     [COMBO_AT] = COMBO(combo_at, LALT(KC_2)),
     [COMBO_HASH] = COMBO(combo_hash, LALT(KC_3)),
     [COMBO_LBRACKET] = COMBO(combo_lbracket, LALT(KC_8)),
@@ -114,7 +114,7 @@ combo_t key_combos[COMBO_COUNT] = {
     [COMBO_TOGGLE_LAYER1_NM] = COMBO(combo_toggle_layer1_nm, TG(1)),
     [COMBO_SPACE] = COMBO(combo_space, KC_SPACE),
     [COMBO_TOGGLE_LAYER1_SLASH] = COMBO(combo_toggle_layer1_slash, TG(1)),
-    [COMBO_LAYER3] = COMBO(combo_layer3, MO(3)),  // Assuming momentary layer 3
+    [COMBO_LAYER3] = COMBO(combo_layer3, LT(3,KC_NO)),  // Assuming momentary layer 3
     [COMBO_HYPER_SPACE] = COMBO(combo_hyper_space, HYPR(KC_SPACE)),
 };
 
