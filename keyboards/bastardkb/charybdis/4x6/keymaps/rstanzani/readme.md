@@ -4,6 +4,9 @@ The Charydbis (4x6) `via` keymap is inspired from the original [Dactyl Manuform]
 
 This layout supports RGB matrix. However, due to space constraints on the MCU, only a limited number of effect can be enabled at once. Look at the `config.h` file and enable your favorite effect.
 
+## ToDo:
+create a keymaps drawer with Charybdis keymap.
+
 ## Customizing the keymap
 
 ### Dynamic DPI scaling
