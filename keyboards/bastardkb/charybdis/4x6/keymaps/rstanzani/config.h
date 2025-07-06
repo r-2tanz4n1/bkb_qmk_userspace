@@ -40,6 +40,7 @@
 
 #define AUTO_SHIFT_TIMEOUT 120
 #define TAPPING_TERM 150
+#define TAPPING_TERM_PER_KEY
 #define QUICK_TAP_TERM 100
 
 #define CAPS_WORD_IDLE_TIMEOUT 5000  // 5 seconds.
