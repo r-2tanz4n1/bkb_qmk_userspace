@@ -165,7 +165,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), LGUI(KC_B), RGUI(KC_W), KC_SPC, RGUI(KC_C), RGUI(KC_V), RGUI(KC_Z), KC_RSFT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                              HYPR_T(KC_NO), KC_LGUI, KC_ENT,    KC_BSPC, RGUI(KC_SPC),
-                                         KC_LALT, C_S(KC_Q),    KC_TAB
+                                         KC_LALT, LCS(KC_Q),    KC_TAB
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
