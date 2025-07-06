@@ -122,8 +122,6 @@ combo_t key_combos[] = {
 };
 
 
-
-/*
 // Tap Dance declarations
 enum {
     TD_ALT,
@@ -132,9 +130,9 @@ enum {
 
 // Tap Dance definitions
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, MOD_LALT),
+    [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_LALT),
 };
-*/
+
 
 
 // clang-format off
@@ -145,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_RBRC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LALT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+       KC_LALT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L, TD(TD_ALT), KC_QUOT,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, SC_SENT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
@@ -180,7 +178,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), LGUI(KC_B), RGUI(KC_W), KC_SPC, RGUI(KC_C), RGUI(KC_V), RGUI(KC_Z), KC_RSFT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                              HYPR_T(KC_NO), KC_LGUI, KC_ENT,    KC_BSPC, RGUI(KC_SPC),
-                                     KC_LALT, LCTL(LSFT(KC_Q),    KC_TAB
+                                           KC_LALT, KC_LCTL,    KC_TAB
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
