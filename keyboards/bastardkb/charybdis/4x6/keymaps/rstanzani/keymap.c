@@ -42,7 +42,8 @@ static uint16_t auto_pointer_layer_timer = 0;
 #    endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD
 #endif     // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 
-#define CHARYBDIS_DRAGSCROLL_REVERSE_Y // inverts vertical scrolling 
+// #define CHARYBDIS_DRAGSCROLL_REVERSE_Y // inverts vertical scrolling 
+
 #define CHARYBDIS_MINIMUM_DEFAULT_DPI 600
 
 #ifndef POINTING_DEVICE_ENABLE

@@ -35,6 +35,7 @@
 // #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #endif // POINTING_DEVICE_ENABLE
 
+#define CHARYBDIS_DRAGSCROLL_REVERSE_Y // inverts vertical scrolling 
 
 
 #define AUTO_SHIFT_TIMEOUT 120
@@ -42,3 +43,5 @@
 #define QUICK_TAP_TERM 100
 
 #define CAPS_WORD_IDLE_TIMEOUT 5000  // 5 seconds.
+
+#define PERMISSIVE_HOLD
