@@ -122,19 +122,6 @@ combo_t key_combos[] = {
 };
 
 
-/* Tap Dance não funcionava, mas com Mod Tap através o VIA, funciona.
-// Tap Dance declarations
-enum {
-    TD_ALT,
-};
-
-
-// Tap Dance definitions
-tap_dance_action_t tap_dance_actions[] = {
-    [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_LALT),
-};
-
-*/
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
