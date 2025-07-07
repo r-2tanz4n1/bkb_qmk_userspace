@@ -38,11 +38,10 @@
 #define CHARYBDIS_DRAGSCROLL_REVERSE_Y // inverts vertical scrolling 
 
 
-#define AUTO_SHIFT_TIMEOUT 120
-#define TAPPING_TERM 145
-#define TAPPING_TERM_PER_KEY
+#define AUTO_SHIFT_TIMEOUT 125
+#define TAPPING_TERM 125
 #define QUICK_TAP_TERM 100
-
+#define TAPPING_TERM_PER_KEY
 #define CAPS_WORD_IDLE_TIMEOUT 5000  // 5 seconds.
 
 #define PERMISSIVE_HOLD
