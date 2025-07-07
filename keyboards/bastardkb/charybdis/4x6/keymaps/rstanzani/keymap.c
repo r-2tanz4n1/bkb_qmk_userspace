@@ -122,6 +122,7 @@ combo_t key_combos[] = {
 };
 
 
+/* Tap Dance não funcionava, mas com Mod Tap através o VIA, funciona.
 // Tap Dance declarations
 enum {
     TD_ALT,
@@ -133,7 +134,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_ALT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_LALT),
 };
 
-
+*/
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -143,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_RBRC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LALT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L, TD(TD_ALT), KC_QUOT,
+       KC_LALT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L, MT(MOD_LALT,KC_SCLN), KC_QUOT,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, SC_SENT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
@@ -154,7 +155,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [NUMPAD] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       KC_NUBS,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   LALT(KC_3), KC_INT1, LSFT(KC_8), LSFT(KC_9), LSFT(KC_INT1), KC_EQL,
+       KC_GRV,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   LALT(KC_3), KC_INT1, LSFT(KC_8), LSFT(KC_9), LSFT(KC_INT1), KC_EQL,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_TAB,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   LSFT(KC_7),  KC_7,  KC_8,  KC_9,  KC_COMM,  KC_LBRC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -178,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), LGUI(KC_B), RGUI(KC_W), KC_SPC, RGUI(KC_C), RGUI(KC_V), RGUI(KC_Z), KC_RSFT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                              HYPR_T(KC_NO), KC_LGUI, KC_ENT,    KC_BSPC, RGUI(KC_SPC),
-                                           KC_LALT, KC_LCTL,    KC_TAB
+                                         KC_LALT, RCS(KC_Q),    KC_TAB
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
