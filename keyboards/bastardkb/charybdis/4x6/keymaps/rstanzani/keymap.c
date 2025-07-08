@@ -75,6 +75,7 @@ enum combo_events {
     COMBO_TOGGLE_LAYER1_SLASH,
     COMBO_LAYER3,
     COMBO_HYPER_SPACE,
+    COMBO_NUMPAD,
 };
 
 // Define the key combinations for each combo
@@ -97,6 +98,7 @@ const uint16_t PROGMEM combo_space[] = {KC_M, KC_COMMA, COMBO_END};
 const uint16_t PROGMEM combo_toggle_layer1_slash[] = {KC_SLASH, SC_SENT, COMBO_END};
 const uint16_t PROGMEM combo_layer3[] = {RGUI_T(KC_BSPC), HYPR_T(KC_DEL), COMBO_END};
 const uint16_t PROGMEM combo_hyper_space[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_numpad[] = {LGUI_T(KC_SPC), LT(3,KC_LEFT), COMBO_END};
 
 // Map combos to their key sequences and result keys
 combo_t key_combos[] = {
@@ -119,6 +121,7 @@ combo_t key_combos[] = {
     [COMBO_TOGGLE_LAYER1_SLASH] = COMBO(combo_toggle_layer1_slash, TG(1)),
     [COMBO_LAYER3] = COMBO(combo_layer3, LT(3,KC_NO)),  // Assuming momentary layer 3
     [COMBO_HYPER_SPACE] = COMBO(combo_hyper_space, HYPR(KC_SPACE)),
+    [COMBO_NUMPAD] = COMBO(combo_numpad, LT(1,KC_NO)),
 };
 
 
@@ -172,7 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-        KC_NO, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
+     OPTICAL_CALIBRATE, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        DPI_MOD, RM_NEXT, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, KC_NO, RCS(KC_W), RCS(KC_E), RCS(KC_R), RCS(KC_T), RCS(KC_Y),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
