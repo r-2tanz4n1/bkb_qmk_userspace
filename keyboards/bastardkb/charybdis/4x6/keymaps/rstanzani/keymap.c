@@ -175,7 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-     OPTICAL_CALIBRATE, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
+     KC_NO, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        DPI_MOD, RM_NEXT, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, KC_NO, RCS(KC_W), RCS(KC_E), RCS(KC_R), RCS(KC_T), RCS(KC_Y),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
