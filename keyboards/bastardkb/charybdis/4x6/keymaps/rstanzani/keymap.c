@@ -16,10 +16,6 @@
  */
 #include QMK_KEYBOARD_H
 
-//pointer calibratiOn:
-#include "pointing_device.h"
-#include "pmw3360.h"
-
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
@@ -130,26 +126,6 @@ combo_t key_combos[] = {
 };
 
 
-//calibrate the sensor
-enum custom_keycodes {
-    MY_CALIBRATE = SAFE_RANGE,
-    // add others here if needed
-};
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case MY_CALIBRATE:
-            if (record->event.pressed) {
-                pointing_device_task();  // Flush motion before reset (optional)
-                pmw3360_reset();
-                pmw3360_upload_firmware();
-            }
-            return false;
-    }
-    return true;
-}
-
-
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -200,7 +176,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-     MY_CALIBRATE, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
+     KC_NO, S_D_MOD, DPI_MOD, KC_NO, KC_NO, KC_NO, RCS(KC_1), RCS(KC_2), RCS(KC_3), RCS(KC_4), RCS(KC_5), RCS(KC_6),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        DPI_MOD, RM_NEXT, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, KC_NO, RCS(KC_W), RCS(KC_E), RCS(KC_R), RCS(KC_T), RCS(KC_Y),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
