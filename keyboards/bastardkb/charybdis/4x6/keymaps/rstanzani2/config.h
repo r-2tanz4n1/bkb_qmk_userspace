@@ -38,7 +38,7 @@
 #define CHARYBDIS_DRAGSCROLL_REVERSE_Y // inverts vertical scrolling 
 
 
-#define AUTO_SHIFT_TIMEOUT 125
+#define AUTO_SHIFT_TIMEOUT 145
 #define TAPPING_TERM 125
 #define QUICK_TAP_TERM 100
 #define TAPPING_TERM_PER_KEY
